@@ -1,8 +1,8 @@
 #!/bin/bash
 
 regnum(){
-    alpha=$(cat /dev/urandom |tr -dc 'A-Z'| fold -w 3|head -1)
-    num=$(cat /dev/urandom |tr -dc '0-9'| fold -w 3|head -1)
+    alpha=$(head /dev/urandom |tr -dc 'A-Z'| fold -w 3|head -1)
+    num=$(head /dev/urandom |tr -dc '0-9'| fold -w 3|head -1)
     echo -n "$alpha $num"
 }
 brand(){
