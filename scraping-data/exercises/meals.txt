@@ -1,0 +1,12 @@
+Breakfast: Egg and tea
+Lunch: Fish and chips
+Snack: Sandwich and juice
+Dinner: Stake and sallad
+Breakfast: Egg and coffee
+Lunch: Hamburger and coke
+Snack: Peanuts and beer
+Dinner: Pizza
+Breakfast: Sandwich and milk
+Lunch: Fish and potato
+Snack: Apple
+Dinner: Pasta and wine
