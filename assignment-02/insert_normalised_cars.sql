@@ -1,10 +1,5 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS cars (color_id INTEGER, make_id INTEGER, LicenseNumber text primary key 
- check(LicenseNumber GLOB '[A-Z][A-Z][A-Z] [0-9][0-9][0-9]'), 
- FOREIGN KEY(color_id) REFERENCES colors(color_id),
- FOREIGN KEY(make_id) REFERENCES makes(make_id)
-);
 INSERT INTO "cars" VALUES('6','3','ZSV 645');
 INSERT INTO "cars" VALUES('4','7','DDR 499');
 INSERT INTO "cars" VALUES('6','9','DVF 030');
