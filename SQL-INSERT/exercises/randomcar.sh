@@ -15,6 +15,7 @@ color(){
     index=$((RANDOM%8))
     echo -n ${colors[$index]}
 }
+export LC_ALL=C  # tr gets problem on MacOS otherwise
 NUMBER=$1
 for i in $(seq 1 $NUMBER)
 do
