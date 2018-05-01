@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "book_all_in_one"(title TEXT, author TEXT, publisher TEXT, ISBN TEXT PRIMARY KEY NOT NULL);
+INSERT INTO "book_all_in_one" VALUES('Databases','Manda Tory','IT-Literature Inc','0000001');
+INSERT INTO "book_all_in_one" VALUES('SQL','Manda Tory','IT-Literature Inc','0000002');
+INSERT INTO "book_all_in_one" VALUES('Java','D. Fault Values','IT-Literature Inc','0000003');
+INSERT INTO "book_all_in_one" VALUES('More Java','M.T. Objects','IT-Literature Inc','0000004');
+INSERT INTO "book_all_in_one" VALUES('Swedish Flowers','Lynn E. Uss','Biology Books AB','0000005');
+INSERT INTO "book_all_in_one" VALUES('Java direkt med Swing','Jan Skansholm','Studentlitteratur','9789144104317');
+INSERT INTO "book_all_in_one" VALUES('Databasteknik','Thomas Padron-Mccarthy','Studentlitteratur','9789144044491');
+INSERT INTO "book_all_in_one" VALUES('Programming in Java','Henrik and Rikard','Juneday','1234567');
+COMMIT;

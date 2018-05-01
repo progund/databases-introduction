@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "book_pub_id_auth_id"(title TEXT, author_id INTEGER, isbn TEXT PRIMARY KEY NOT NULL, publisher_id INTEGER);
+INSERT INTO "book_pub_id_auth_id" VALUES('Java direkt med Swing',1,'9789144104317',1);
+INSERT INTO "book_pub_id_auth_id" VALUES('Databasteknik',2,'9789144044491',1);
+INSERT INTO "book_pub_id_auth_id" VALUES('Programming in Java',3,'1234567',2);
+INSERT INTO "book_pub_id_auth_id" VALUES('Swedish Flowers',4,'0000005',6);
+INSERT INTO "book_pub_id_auth_id" VALUES('More Java',5,'0000004',5);
+INSERT INTO "book_pub_id_auth_id" VALUES('Java',6,'0000003',5);
+INSERT INTO "book_pub_id_auth_id" VALUES('SQL',7,'0000002',5);
+INSERT INTO "book_pub_id_auth_id" VALUES('Databases',7,'0000001',5);
+COMMIT;

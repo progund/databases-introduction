@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE book_publisher(isbn TEXT, publisher_id INTEGER);
+INSERT INTO "book_publisher" VALUES('9789144104317',1);
+INSERT INTO "book_publisher" VALUES('9789144044491',1);
+INSERT INTO "book_publisher" VALUES('1234567',2);
+INSERT INTO "book_publisher" VALUES('0000005',6);
+INSERT INTO "book_publisher" VALUES('0000004',5);
+INSERT INTO "book_publisher" VALUES('0000003',5);
+INSERT INTO "book_publisher" VALUES('0000002',5);
+INSERT INTO "book_publisher" VALUES('0000001',5);
+COMMIT;

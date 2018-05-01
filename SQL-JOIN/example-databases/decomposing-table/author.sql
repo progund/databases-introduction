@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE author(author_id INTEGER PRIMARY KEY NOT NULL, name TEXT NOT NULL);
+INSERT INTO "author" VALUES(1,'Jan Skansholm');
+INSERT INTO "author" VALUES(2,'Thomas Padron-Mccarthy');
+INSERT INTO "author" VALUES(3,'Henrik and Rikard');
+INSERT INTO "author" VALUES(4,'Lynn E. Uss');
+INSERT INTO "author" VALUES(5,'M.T. Objects');
+INSERT INTO "author" VALUES(6,'D. Fault Values');
+INSERT INTO "author" VALUES(7,'Manda Tory');
+INSERT INTO "author" VALUES(8,'Selma Lagerlöf');
+COMMIT;

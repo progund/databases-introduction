@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE book(title TEXT, isbn TEXT PRIMARY KEY NOT NULL);
+INSERT INTO "book" VALUES('Java direkt med Swing','9789144104317');
+INSERT INTO "book" VALUES('Databasteknik','9789144044491');
+INSERT INTO "book" VALUES('Programming in Java','1234567');
+INSERT INTO "book" VALUES('Swedish Flowers','0000005');
+INSERT INTO "book" VALUES('More Java','0000004');
+INSERT INTO "book" VALUES('Java','0000003');
+INSERT INTO "book" VALUES('SQL','0000002');
+INSERT INTO "book" VALUES('Databases','0000001');
+COMMIT;
