@@ -1,6 +1,8 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS cars (Make text,Color text, LicenseNumber text primary key);
+CREATE TABLE IF NOT EXISTS cars (make TEXT,
+                                 color TEXT,
+                                 licensenumber TEXT PRIMARY KEY);
 INSERT INTO "cars" VALUES('Honda','White','ZSV 645');
 INSERT INTO "cars" VALUES('Saab','Yellow','DDR 499');
 INSERT INTO "cars" VALUES('Dodge','White','DVF 030');
