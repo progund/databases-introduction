@@ -1,6 +1,7 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
-CREATE TABLE publisher(publisher_id INTEGER PRIMARY KEY NOT NULL, name TEXT UNIQUE NOT NULL);
+CREATE TABLE publisher(publisher_id INTEGER PRIMARY KEY NOT NULL,
+                               name TEXT UNIQUE NOT NULL);
 INSERT INTO "publisher" VALUES(1,'Studentlitteratur');
 INSERT INTO "publisher" VALUES(2,'Juneday');
 INSERT INTO "publisher" VALUES(3,'Mayday! Mayday!');
