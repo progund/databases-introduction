@@ -31,7 +31,7 @@ fetch() {
                                 grep 'class="publicationTitle"' |
                                 cut -d '"' -f2)
         do
-            echo "$PUB_URL" | grep -q https: || PUB_URL="https://www.gu.se$PUB_URL"
+            echo "$PUB_URL" | grep -q http || PUB_URL="https://www.gu.se$PUB_URL"
             
             IS_FIRST=false
             IS_SCI=false
