@@ -12,6 +12,9 @@ fetch() {
     TOTAL_YEARS=0
     URL=$1
     echo "Publication information per employee"
+    echo "Legend: a dot means co-authorship outside scientific journal,"
+    echo "        F means first-name authorship outside scientifice journal,"
+    echo "        V means first-name authorship in a scientific journal."  
     for HOME_PAGE in $(GET "$URL"| grep omdirigering|grep =\"person|cut -d '"' -f2|sort|uniq)
     do
         num_first_name=0
@@ -23,7 +26,15 @@ fetch() {
         user_id=$(echo $HOME_PAGE |cut -d '?' -f2| tr '&' '\n' | grep userId|cut -d '=' -f2)
         name=$(cat "${TMP_PAGE}"|grep '<h1>'|sed -e 's/.*<h1>\([&;A-Za-z -]\+\)<\/h1>.*/\1/g')
         name=$(echo "$name"|w3m -dump -T text/html)
-        echo -n "Analysing papers by $name "
+        last_pub_year=$(cat "${TMP_PAGE}"|grep -A30000 'Visar 1 - ' |
+                               egrep '<h3>[0-9]{4}</h3>' |
+                               head -1 |
+                               sed -e 's/.*\([0-9]\{4\}\).*/\1/g')
+        first_pub_year=$(cat "${TMP_PAGE}"|grep -A30000 'Visar 1 - '|
+                                egrep '<h3>[0-9]{4}</h3>'|
+                                tail -1 |
+                                sed -e 's/.*\([0-9]\{4\}\).*/\1/g')
+        echo -n "Analysing papers by $name from $last_pub_year "
         for PUB_URL in $(cat $TMP_PAGE |grep -A30000 'Visar 1 - '|
                                 grep [a-z] |
                                 tr '\t' ' ' |
@@ -64,15 +75,8 @@ fetch() {
                 echo -n "."
             fi
         done
-        echo "Done analysing papers."
-        last_pub_year=$(cat "${TMP_PAGE}"|grep -A30000 'Visar 1 - ' |
-                               egrep '<h3>[0-9]{4}</h3>' |
-                               head -1 |
-                               sed -e 's/.*\([0-9]\{4\}\).*/\1/g')
-        first_pub_year=$(cat "${TMP_PAGE}"|grep -A30000 'Visar 1 - '|
-                                egrep '<h3>[0-9]{4}</h3>'|
-                                tail -1 |
-                                sed -e 's/.*\([0-9]\{4\}\).*/\1/g')
+        echo " $first_pub_year."
+        echo " Done analysing papers."
         if ((num_pub != 0))
         then
             ((TOTAL_PUBS += num_pub))
