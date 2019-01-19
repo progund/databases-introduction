@@ -11,6 +11,8 @@ TOTAL_MINS_WORKSHOP=0
 
 declare -A TYPE_HOURS
 declare -A TYPE_MINS
+declare -A TEACHER_HOURS
+declare -A TEACHER_MINS
 
 CAL_FILE=$1
 
@@ -24,7 +26,7 @@ do
     #echo $line
     IFS=","
     #echo $line
-    while read date start x end course x type x x x x x x
+    while read date start x end course x type x teacher x x x x
     do
         #echo "date: $date start: $start end: $end type: $type kurs: $course"
         KURS=$course
@@ -69,6 +71,7 @@ do
                 ((duration_hours--))
             fi
         fi
+        
         if [[ -z "$type" ]]
         then
             IFS="$OLDIFS"
@@ -85,6 +88,19 @@ do
         TYPE_HOURS["$type"]=$((thrs += duration_hours))
         tmins=${TYPE_MINS[$type]}
         TYPE_MINS["$type"]=$((tmins += duration_mins))
+        if [[ -z "$teacher" || "$teacher" == " " ]]
+        then
+            teacher="Other/Unknown teacher"
+        fi
+        echo "teacher: $teacher"
+        prof_hours=${TEACHER_HOURS[$teacher]}
+        if [[ -z prof_hours ]]
+        then
+            prof_hours=0
+        fi
+        TEACHER_HOURS["$teacher"]=$((prof_hours += duration_hours))
+        prof_minss=${TEACHER_MINS[$teacher]}
+        TEACHER_MINS["$teacher"]=$((prof_mins += duration_mins))
         ((TOTAL_HOURS += duration_hours))
         ((TOTAL_MINS += duration_mins))
         case "${type:0:5}" in
@@ -134,6 +150,12 @@ do
     TYPE_HOURS[$k]=$((TYPE_HOURS[$k] + TYPE_MINS[$k] / 60))
     TYPE_MINS[$k]=$((TYPE_MINS[$k] % 60))
     printf "%s\n" "$k: ${TYPE_HOURS[$k]} hrs and ${TYPE_MINS[$k]} mins."
+done | sort -rnk2,5
+for k in "${!TEACHER_HOURS[@]}"
+do
+    TEACHER_HOURS[$k]=$((TEACHER_HOURS[$k] + TEACHER_MINS[$k] / 60))
+    TEACHER_MINS[$k]=$((TEACHER_MINS[$k] % 60))
+    printf "%s\n" "$k: ${TEACHER_HOURS[$k]} hrs and ${TEACHER_MINS[$k]} mins."
 done | sort -rnk2,5
 
 echo -e "\nEnd of report.\n"
