@@ -145,7 +145,7 @@ do
             #echo "start: $start end: $end type: $type duration: $duration_hours hrs and $duration_mins mins"
     done < <(echo "$line")
     #echo "date: $date start: $start stop: $stop type: $type"
-done < <(cat "$CAL_FILE" | sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g;s/"//g'|egrep ^[0-9]{4})
+done < <(cat "$CAL_FILE" | sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g;s/"//g'|egrep ^[0-9]{4}|grep -v enta)
 
 ((TOTAL_HOURS += TOTAL_MINS/60))
 TOTAL_MINS=$((TOTAL_MINS % 60))
