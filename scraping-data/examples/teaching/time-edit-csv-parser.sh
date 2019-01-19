@@ -15,15 +15,19 @@ declare -A TYPE_MINS
 CAL_FILE=$1
 
 OLDIFS="$IFS"
+KURS=""
+START_DATE=$(egrep ^[0-9]{4} "$CAL_FILE"|head -1|cut -d ',' -f1)
+END_DATE=$(egrep ^[0-9]{4} "$CAL_FILE"|tail -1|cut -d ',' -f1)
 
 while read line
 do
     #echo $line
     IFS=","
     #echo $line
-    while read date start x end x x type x x x x x x
+    while read date start x end course x type x x x x x x
     do
-        echo "date: $date start: $start end: $end type: $type"
+        #echo "date: $date start: $start end: $end type: $type kurs: $course"
+        KURS=$course
         start_hour="${start:0:2}"
         if [[ "${start_hour:0:1}" -eq 0 ]]
         then
@@ -47,7 +51,15 @@ do
                 end_minute=${end_minute:1:1}
         fi
         duration_mins=0
+        duration_hours=0
         duration_hours=$((end_hour - start_hour))
+        if ((duration_hours < 0))
+        then
+            #echo "start: $start end: $end"
+            ((duration_hours += 24))
+            #echo "duration hrs: $duration_hours"
+        fi
+
         if ((start_minute != end_minute))
         then
             duration_mins=$((end_minute - start_minute))
@@ -68,7 +80,7 @@ do
         then
             type="Other/Unknown"
         fi
-        echo "Type: $type"
+        #echo "Type: $type"
         thrs=${TYPE_HOURS[$type]}
         TYPE_HOURS["$type"]=$((thrs += duration_hours))
         tmins=${TYPE_MINS[$type]}
@@ -107,7 +119,8 @@ TOTAL_MINS_SUPTERVISION=$((TOTAL_MINS_SUPERVISION % 60))
 TOTAL_MINS_WORKSHOP=$((TOTAL_MINS_WORKSHOP % 60))
 
 #PERIOD=$(cat "$CAL_FILE"|egrep '(H|V)T?[0-9]{2}'|tr -d '\\'|tr ',' '\n'|sed -e 's/\ *//'|egrep '(H|V)T?[0-9]{2}')
-#echo "$COURSE $PERIOD"
+PERIOD="$START_DATE - $END_DATE"
+echo "$KURS $PERIOD"
 echo "Total time: $TOTAL_HOURS hrs and $TOTAL_MINS mins"
 #echo "Total lecture time: $TOTAL_HOURS_LECTURE hrs and $TOTAL_MINS_LECTURE mins"
 #echo "Total supervision time: $TOTAL_HOURS_SUPERVISION hrs and $TOTAL_MINS_SUPERVISION mins"
@@ -123,4 +136,5 @@ do
     printf "%s\n" "$k: ${TYPE_HOURS[$k]} hrs and ${TYPE_MINS[$k]} mins."
 done | sort -rnk2,5
 
+echo -e "\nEnd of report.\n"
 IFS=$OLDIFS
