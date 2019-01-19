@@ -1,0 +1,791 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+X-WR-CALNAME:TimeEdit-TIG015\, Informationsteknologi och in
+ formationssystem\, DAG\, H18\, ORD\, NML\, GÖTEBORG-20190119
+X-WR-CALDESC:Date limit -
+X-PUBLISHED-TTL:PT20M
+CALSCALE:GREGORIAN
+PRODID:-//TimeEdit\\\, //TimeEdit//EN
+BEGIN:VEVENT
+DTSTART:20180903T071500Z
+DTEND:20180903T100000Z
+UID:1455022-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Introduktion\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nKurs: Informationsteknologi och inf
+ ormationssystem\nIntroduktion. BIS Kap 1\n2 och 6\nID 1455022
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180904T081500Z
+DTEND:20180904T100000Z
+UID:1455037-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\n
+ Kurs: Informationsteknologi och informatio
+ nssystem\nDator och OS- introduktion\nID 1455037
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180904T110000Z
+DTEND:20180904T140000Z
+UID:1455045-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: Inf
+ ormationsteknologi och informationssystem\,\nID 1455045
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180906T081500Z
+DTEND:20180906T100000Z
+UID:1455070-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nKurs: Informationsteknologi och infor
+ mationssystem\nProjektstyrning\nBIS Kap 9\nStyrkort\nID 1455070
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180907T081500Z
+DTEND:20180907T100000Z
+UID:1458891-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: Informationste
+ knologi och informationssystem\nProgrammeringsgrunder\nID 1458891
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180910T081500Z
+DTEND:20180910T100000Z
+UID:1458894-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\n
+ Kurs: Informationsteknologi och informatio
+ nssystem\nTyper\nvariabler och uttryck\nID 1458894
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180910T110000Z
+DTEND:20180910T130000Z
+UID:1458897-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Projektarbete\, Systemvetenskap år 1\, Projektstart
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nKurs: Informationsteknolo
+ gi och informationssystem\nProjektstart\nID 1458897
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180911T110000Z
+DTEND:20180911T140000Z
+UID:1458908-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, System
+ vetenskap år 1\, Gästföreläsning Tieto
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Lärare Carina Örtenberg\nTieto§
+ §Kurs: Informationsteknologi och informa
+ tionssystem\nProjekt/PPS – Metoden\nID 1458908
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180913T081500Z
+DTEND:20180913T100000Z
+UID:1458915-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Övning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nKurs: Informationsteknologi oc
+ h informationssystem\nBIS Kap 8 & 10 + Övning\nID 1458915
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180913T110000Z
+DTEND:20180913T130000Z
+UID:1458920-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Anna-Lena Fredriksson\nKurs: Informationsteknologi och
+  informationssystem\nIntroduktion till rapportskrivning\nID 1458920
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180914T081500Z
+DTEND:20180914T100000Z
+UID:1458923-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKu
+ rs: Informationsteknologi och informationssy
+ stem\nBlock\nif\nfor\nwhile och metoder\nID 1458923
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180914T110000Z
+DTEND:20180914T140000Z
+UID:1458925-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1458925
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180917T081500Z
+DTEND:20180917T100000Z
+UID:1458931-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1458931
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180917T110000Z
+DTEND:20180917T140000Z
+UID:1458934-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1458934
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180918T081500Z
+DTEND:20180918T100000Z
+UID:1458941-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Anna-Lena Fredriksson\nKurs: Inf
+ ormationsteknologi och informationssystem
+ \nMuntlig presentationsteknik\nWalla\nID 1458941
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180918T110000Z
+DTEND:20180918T140000Z
+UID:1458944-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Anna-Lena Fredriksson\nKurs: Informationsteknol
+ ogi och informationssystem\nReferera och citera\nID 1458944
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180919T081500Z
+DTEND:20180919T100000Z
+UID:1458951-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Pr
+ ojektarbete\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nKurs: Informationsteknologi och
+  informationssystem\nGenomgång Projektrapport\nID 1458951
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180919T110000Z
+DTEND:20180919T140000Z
+UID:1458953-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1458953
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180920T070000Z
+DTEND:20180920T150000Z
+UID:1458962-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Projektarbete
+ \, Systemvetenskap år 1\, Handledning Projekt
+LOCATION:Thanos (481) Forskningsgån
+ gen 6\, USB (433) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nUrban Nuldén\nKurs: Infor
+ mationsteknologi och informationssystem\nID 1458962
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180921T110000Z
+DTEND:20180921T140000Z
+UID:1458966-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1458966
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180924T081500Z
+DTEND:20180924T100000Z
+UID:1458969-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1458969
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180924T110000Z
+DTEND:20180924T130000Z
+UID:1458970-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1458970
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180925T081500Z
+DTEND:20180925T100000Z
+UID:1458973-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Pr
+ ojektarbete\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nKurs: Informationsteknologi och
+  informationssystem\nBIS Kap 13-14 och projekt\nID 1458973
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180926T081500Z
+DTEND:20180926T100000Z
+UID:1458981-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1458981
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180926T110000Z
+DTEND:20180926T140000Z
+UID:1458982-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1458982
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180927T070000Z
+DTEND:20180927T110000Z
+UID:1459005-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Lärare/student möte\, Semina
+ rium\, Systemvetenskap år 1\, Styrgruppsmöte 1
+LOCATION:Torg Orange (406) Forskningsgången 6
+DESCRIPTION:Styrgruppsmöte 1\nAnna-Lena Fredrik
+ sson\nKalevi Pessi\nUrban Nuldén\nKurs: Info
+ rmationsteknologi och informationssystem\nID 1459005
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180928T070000Z
+DTEND:20180928T100000Z
+UID:1459015-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Lärare/student möte
+ \, Seminarium\, Systemvetenskap år 1
+LOCATION:Erik Stemme (339B) Forskningsgå
+ ngen 6\, Thanos (481) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nUrban Nuldén\nKurs: Infor
+ mationsteknologi och informationssystem\nID 1459015
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181001T081500Z
+DTEND:20181001T100000Z
+UID:1459020-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1459020
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181001T110000Z
+DTEND:20181001T140000Z
+UID:1459021-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459021
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181005T081500Z
+DTEND:20181005T100000Z
+UID:1459023-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nLägga 
+ till egna objekt i spelet\nutöka klasser - arv\nID 1459023
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181005T110000Z
+DTEND:20181005T140000Z
+UID:1459024-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459024
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181008T081500Z
+DTEND:20181008T100000Z
+UID:1459030-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: Informat
+ ionsteknologi och informationssystem\nArv- teori\nID 1459030
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181008T110000Z
+DTEND:20181008T140000Z
+UID:1459035-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: Inf
+ ormationsteknologi och informationssystem\,\nID 1459035
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181010T070000Z
+DTEND:20181010T140000Z
+UID:1459044-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Projektarbete\, Systemvetenskap år 1
+LOCATION:Thanos (481) Forskningsgån
+ gen 6\, USB (433) Forskningsgången 6
+DESCRIPTION:Kalevi Pessi\nUrban Nuldén\nKurs: Informationstek
+ nologi och informationssystem\nHandledning Projekt\nID 1459044
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181012T081500Z
+DTEND:20181012T100000Z
+UID:1459046-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKu
+ rs: Informationsteknologi och informationssy
+ stem\nUppfylla förväntningar - interface\nID 1459046
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181012T110000Z
+DTEND:20181012T140000Z
+UID:1459047-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459047
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181015T081500Z
+DTEND:20181015T100000Z
+UID:1459049-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1459049
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181015T110000Z
+DTEND:20181015T140000Z
+UID:1459050-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459050
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181016T070000Z
+DTEND:20181016T140000Z
+UID:1459052-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Lärare/student möte\, Semina
+ rium\, Systemvetenskap år 1\, Styrgruppsmöte 2
+LOCATION:Torg Blå (407) Forskningsgången 6
+DESCRIPTION:Styrgruppsmöte 2\nAnna-Lena Fredrik
+ sson\nKalevi Pessi\nUrban Nuldén\nKurs: Info
+ rmationsteknologi och informationssystem\nID 1459052
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181017T070000Z
+DTEND:20181017T140000Z
+UID:1459053-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Lärare/student möte\, Semina
+ rium\, Systemvetenskap år 1\, Styrgruppsmöte 2
+LOCATION:Grace Hopper (323A) Forskningsgången 6
+DESCRIPTION:Styrgruppsmöte 2\nAnna-Lena Fredrik
+ sson\nKalevi Pessi\nUrban Nuldén\nKurs: Info
+ rmationsteknologi och informationssystem\nID 1459053
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181018T070000Z
+DTEND:20181018T140000Z
+UID:1459073-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459073
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181019T081500Z
+DTEND:20181019T100000Z
+UID:1459075-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1459075
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181019T110000Z
+DTEND:20181019T140000Z
+UID:1459076-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459076
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181022T081500Z
+DTEND:20181022T100000Z
+UID:1459077-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1459077
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181022T110000Z
+DTEND:20181022T140000Z
+UID:1459078-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459078
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181024T110000Z
+DTEND:20181024T140000Z
+UID:1459089-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg§
+ §Kurs: Informationsteknologi och informat
+ ionssystem\nHandledning Programmering\nID 1459089
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181029T080000Z
+DTEND:20181029T150000Z
+UID:1459093-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1459093
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181029T224500Z
+DTEND:20181029T230000Z
+UID:1459148-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Inlämning\, Systemvet
+ enskap år 1\, Inlämning Projektrapport
+LOCATION:
+DESCRIPTION:Inlämning Projektrapport i GUL  Senast 23:59\nKu
+ rs: Informationsteknologi och informationssystem\nID 1459148
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180906T110000Z
+DTEND:20180906T130000Z
+UID:1487170-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Självstudier\, Övning
+ \, Systemvetenskap år 1\, Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kurs: Informationsteknolo
+ gi och informationssystem\nID 1487170
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180912T070000Z
+DTEND:20180912T100000Z
+UID:1487171-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Självstudier\, Övning
+ \, Systemvetenskap år 1\, Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kurs: Informationsteknolo
+ gi och informationssystem\nID 1487171
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181003T070000Z
+DTEND:20181003T100000Z
+UID:1487175-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Självstudier\, Övning
+ \, Systemvetenskap år 1\, Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kurs: Informationsteknolo
+ gi och informationssystem\nID 1487175
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181011T070000Z
+DTEND:20181011T100000Z
+UID:1487176-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Självstudier\, Övning
+ \, Systemvetenskap år 1\, Programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kurs: Informationsteknolo
+ gi och informationssystem\nID 1487176
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181025T070000Z
+DTEND:20181025T100000Z
+UID:1487181-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Självstudier\, Övning
+ \, Systemvetenskap år 1\, programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Kurs: Informationsteknolo
+ gi och informationssystem\nID 1487181
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181030T080000Z
+DTEND:20181030T150000Z
+UID:1487203-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1487203
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181031T080000Z
+DTEND:20181031T150000Z
+UID:1487204-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1487204
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181102T080000Z
+DTEND:20181102T150000Z
+UID:1487206-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Handledning\, Systemve
+ tenskap år 1\, Handledning programmering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1487206
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181104T224500Z
+DTEND:20181104T230000Z
+UID:1487210-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Inlämning\, System
+ vetenskap år 1\, I GUL senast 23:59
+LOCATION:
+DESCRIPTION:Kurs: Informationsteknologi och informationss
+ ystem\nObligatorisk inlämning i programmering\nID 1487210
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180925T094500Z
+DTEND:20180925T100000Z
+UID:1487660-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Inlämning\, Syst
+ emvetenskap år 1\, Inlämning i GUL
+LOCATION:
+DESCRIPTION:Inlämning Underlag till styrgrup
+ psmöte 1. Senast kl 12:00 \nKurs: Informa
+ tionsteknologi och informationssystem\nID 1487660
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181012T094500Z
+DTEND:20181012T100000Z
+UID:1487661-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Inlämning\, Syst
+ emvetenskap år 1\, Inlämning i GUL
+LOCATION:
+DESCRIPTION:Inlämning Underlag till styrgrup
+ psmöte 2. Senast kl 12:00 \nKurs: Informa
+ tionsteknologi och informationssystem\nID 1487661
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181101T073000Z
+DTEND:20181101T113000Z
+UID:1493004-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Tentamen\, Systemvetenskap år 1
+LOCATION:
+DESCRIPTION:Salstenta\nse information om sal i hus Saga\nKu
+ rs: Informationsteknologi och informationssystem\nID 1493004
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180928T110000Z
+DTEND:20180928T140000Z
+UID:1500185-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Lärare/student möte
+ \, Seminarium\, Systemvetenskap år 1
+LOCATION:Thanos (481) Forskningsgånge
+ n 6\, Torg 3 (331) Forskningsgången 6
+DESCRIPTION:Anna-Lena Fredriksson\nKalevi Pessi\nUrban Nuldén§
+ §Kurs: Informationsteknologi och informationssystem\nID 1500185
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180927T110000Z
+DTEND:20180927T140000Z
+UID:1517507-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Lärare/student möte
+ \, Seminarium\, Systemvetenskap år 1
+LOCATION:Grace Hopper (323A) Forskningsg
+ ången 6\, Thanos (481) Forskningsgången 6
+DESCRIPTION:Anna-Lena Fredriksson\nKalevi Pessi\nUrban Nuldén§
+ §Kurs: Informationsteknologi och informationssystem\nID 1517507
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181023T130000Z
+DTEND:20181023T150000Z
+UID:1530033-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Övning\, Systemvetenskap år 1\, Liveprogrammering
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Liveprogrammering inför tentan hålls av Sysomatic §
+ §Kurs: Informationsteknologi och informationssystem\nID 1530033
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181024T081500Z
+DTEND:20181024T100000Z
+UID:1538511-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Föreläsning\, Systemvetenskap år 1
+LOCATION:Torg Grön (405) Forskningsgången 6
+DESCRIPTION:Henrik Sandklef\nRikard Fröberg\nKurs: In
+ formationsteknologi och informationssystem\nID 1538511
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181022T140000Z
+DTEND:20181022T141500Z
+UID:1546749-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Anmälan\, Systemvetenskap år 1\, Påminnelse!
+LOCATION:
+DESCRIPTION:Sista anmälningsdag till salstentan\nKurs: 
+ Informationsteknologi och informationssystem\nID 1546749
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181219T073000Z
+DTEND:20181219T113000Z
+UID:1554015-1094642488-0@timeedit.com
+DTSTAMP:20190119T150358Z
+LAST-MODIFIED:20190119T150358Z
+SUMMARY:TIG015\, Tentamen\, Systemvetenskap år 1
+LOCATION:
+DESCRIPTION:Kurs: Informationsteknolo
+ gi och informationssystem\nID 1554015
+END:VEVENT
+END:VCALENDAR
