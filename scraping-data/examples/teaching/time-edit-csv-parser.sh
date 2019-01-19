@@ -35,7 +35,7 @@ do
 done < <(cat "$CAL_FILE"| sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g;s/\ //g'| grep Start|tr ',' '\n'|grep -v 'grupp"')|egrep 'Typ|Undervisningstyp'|cut -d ' ' -f1)
 
 declare -a tokens
-
+KURS=$(cat "$CAL_FILE"|tr ',' '\n'|tr -d '"' |grep TIG|head -1)
 while read line
 do
     IFS=","
@@ -50,8 +50,9 @@ do
         then
             type=${tokens[$((type_index - 1))]}
         fi
-        KURS=$course
-        
+        #KURS=$course
+        #echo "$KURS" | grep -q TIG || KURS=$(for tok in $line;do echo "$tok"|done | grep TIG)
+        #echo "$KURS"
         start_hour="${start:0:2}"
         if [[ "${start_hour:0:1}" -eq 0 ]]
         then
