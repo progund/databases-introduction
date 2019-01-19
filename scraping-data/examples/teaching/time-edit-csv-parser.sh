@@ -21,15 +21,37 @@ KURS=""
 START_DATE=$(egrep ^[0-9]{4} "$CAL_FILE"|head -1|cut -d ',' -f1)
 END_DATE=$(egrep ^[0-9]{4} "$CAL_FILE"|tail -1|cut -d ',' -f1)
 
+count=0
+
+teacher_index=$(while read token
+do
+    ((count++))
+    echo "$count" "$token"
+done < <(cat "$CAL_FILE"| sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g;s/\ //g'| grep Start|tr ',' '\n'|grep -v 'grupp"')|egrep 'Personal|Lärare'|cut -d ' ' -f1)
+type_index=$(while read token
+do
+    ((count++))
+    echo "$count" "$token"
+done < <(cat "$CAL_FILE"| sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g;s/\ //g'| grep Start|tr ',' '\n'|grep -v 'grupp"')|egrep 'Typ|Undervisningstyp'|cut -d ' ' -f1)
+
+declare -a tokens
+
 while read line
 do
-    #echo $line
     IFS=","
-    #echo $line
-    while read date start x end course x type x teacher x x x x
+    while read date start x3 end course x6 type x8 teacher x10 x11 x12 x13 x14 x15
     do
-        #echo "date: $date start: $start end: $end type: $type kurs: $course"
+        tokens=("$date " "$start " "$x3" "$end" "$course" "$x6" "$type" "$x8" "$teacher" "${x10}" "$x11" "$x12" "$x13" "$x14" "$x15" )
+        if ((teacher_index != 9))
+        then
+            teacher=${tokens[$((teacher_index - 1))]}
+        fi
+        if ((type_index != 7))
+        then
+            type=${tokens[$((type_index - 1))]}
+        fi
         KURS=$course
+        
         start_hour="${start:0:2}"
         if [[ "${start_hour:0:1}" -eq 0 ]]
         then
@@ -76,7 +98,7 @@ do
         then
             IFS="$OLDIFS"
             #echo $line
-            type=$(echo "$line"|tr ',' '\n'|egrep 'Förel|Works|Semin|Handl|Övnin|Inläm|Tenta|Anmäl|Projekt'|head -1)
+            type=$(echo "$line"|tr ',' '\n'|egrep 'Förel|Works|Semin|Handl|Övnin|Inläm|Tenta|Anmäl|Projekt|Själv|Grupparb|Systemtes|Redov|Påminn|Introd|Omtent'|head -1)
             IFS=","
         fi
         if [[ -z "$type" ]]
@@ -119,7 +141,6 @@ do
             *)
                 ;;
         esac
-            #echo "type: $type"
             #echo "start: $start end: $end type: $type duration: $duration_hours hrs and $duration_mins mins"
     done < <(echo "$line")
     #echo "date: $date start: $start stop: $stop type: $type"
@@ -134,14 +155,11 @@ TOTAL_MINS_SUPTERVISION=$((TOTAL_MINS_SUPERVISION % 60))
 ((TOTAL_HOURS_WORKSHOP += TOTAL_MINS_WORKSHOP/60))
 TOTAL_MINS_WORKSHOP=$((TOTAL_MINS_WORKSHOP % 60))
 
-#PERIOD=$(cat "$CAL_FILE"|egrep '(H|V)T?[0-9]{2}'|tr -d '\\'|tr ',' '\n'|sed -e 's/\ *//'|egrep '(H|V)T?[0-9]{2}')
 PERIOD="$START_DATE - $END_DATE"
+echo "=========================="
 echo "$KURS $PERIOD"
 echo "Total time: $TOTAL_HOURS hrs and $TOTAL_MINS mins"
-#echo "Total lecture time: $TOTAL_HOURS_LECTURE hrs and $TOTAL_MINS_LECTURE mins"
-#echo "Total supervision time: $TOTAL_HOURS_SUPERVISION hrs and $TOTAL_MINS_SUPERVISION mins"
-#echo "Total worskhop time: $TOTAL_HOURS_WORKSHOP hrs and $TOTAL_MINS_WORKSHOP mins"
-#ACTIVITIES=$(cat "$CAL_FILE"| grep SUMMARY | sed -e 's/\\//g;s/,\ /,/g' |cut -d ',' -f 2|grep -v SUMMARY|sort|uniq -c|sort -rnk1|sed -e 's/^\ *//g')
+
 echo
 echo "Types and distribution of activities:"
 #echo $TYPE_HOURS
@@ -161,5 +179,7 @@ do
     printf "%s\n" "$k: ${TEACHER_HOURS[$k]} hrs and ${TEACHER_MINS[$k]} mins."
 done | sort -rnk2,5
 
-echo -e "\nEnd of report.\n"
+echo -e "\nEnd of report."
+echo "=========================="
+echo
 IFS=$OLDIFS
