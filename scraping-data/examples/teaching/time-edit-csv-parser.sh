@@ -92,7 +92,7 @@ do
         then
             teacher="Other/Unknown teacher"
         fi
-        echo "teacher: $teacher"
+        #echo "teacher: $teacher"
         prof_hours=${TEACHER_HOURS[$teacher]}
         if [[ -z prof_hours ]]
         then
@@ -142,7 +142,8 @@ echo "Total time: $TOTAL_HOURS hrs and $TOTAL_MINS mins"
 #echo "Total supervision time: $TOTAL_HOURS_SUPERVISION hrs and $TOTAL_MINS_SUPERVISION mins"
 #echo "Total worskhop time: $TOTAL_HOURS_WORKSHOP hrs and $TOTAL_MINS_WORKSHOP mins"
 #ACTIVITIES=$(cat "$CAL_FILE"| grep SUMMARY | sed -e 's/\\//g;s/,\ /,/g' |cut -d ',' -f 2|grep -v SUMMARY|sort|uniq -c|sort -rnk1|sed -e 's/^\ *//g')
-echo -e "Types and distribution of activities:\n$ACTIVITIES"
+echo
+echo "Types and distribution of activities:"
 #echo $TYPE_HOURS
 #echo $TYPE_MINS
 for k in "${!TYPE_HOURS[@]}"
@@ -151,6 +152,8 @@ do
     TYPE_MINS[$k]=$((TYPE_MINS[$k] % 60))
     printf "%s\n" "$k: ${TYPE_HOURS[$k]} hrs and ${TYPE_MINS[$k]} mins."
 done | sort -rnk2,5
+echo
+echo "Types and distribution of teacher involvement:"
 for k in "${!TEACHER_HOURS[@]}"
 do
     TEACHER_HOURS[$k]=$((TEACHER_HOURS[$k] + TEACHER_MINS[$k] / 60))
