@@ -113,16 +113,21 @@ do
         TYPE_MINS["$type"]=$((tmins += duration_mins))
         if [[ -z "$teacher" || "$teacher" == " " ]]
         then
-            teacher="Other/Unknown teacher"
+            #teacher="Other/Unknown teacher"
+            teacher="Other/Unknown teacher $type"
+        else
+            teacher="$teacher $type"
         fi
         #echo "teacher: $teacher"
+        prof_hours=0
         prof_hours=${TEACHER_HOURS[$teacher]}
         if [[ -z prof_hours ]]
         then
             prof_hours=0
+            prof_mins
         fi
         TEACHER_HOURS["$teacher"]=$((prof_hours += duration_hours))
-        prof_minss=${TEACHER_MINS[$teacher]}
+        prof_mins=${TEACHER_MINS[$teacher]}
         TEACHER_MINS["$teacher"]=$((prof_mins += duration_mins))
         ((TOTAL_HOURS += duration_hours))
         ((TOTAL_MINS += duration_mins))
@@ -145,7 +150,8 @@ do
             #echo "start: $start end: $end type: $type duration: $duration_hours hrs and $duration_mins mins"
     done < <(echo "$line")
     #echo "date: $date start: $start stop: $stop type: $type"
-done < <(cat "$CAL_FILE" | sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g;s/"//g'|egrep ^[0-9]{4}|grep -v enta)
+#done < <(cat "$CAL_FILE" | sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g'| sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g'| sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g;s/"//g'|egrep ^[0-9]{4}|grep -v enta)
+done < <(cat "$CAL_FILE" | sed -e 's/\([^"]*"\)\([^",]*\)\(,\)\(.*\)/\1\2;\4/g'|  sed -e 's/\([^"]*"\)\([^",]*\)\(,*\)\(.*\)/\1\2;\4/g;s/"//g'|egrep ^[0-9]{4}|grep -v enta)
 
 ((TOTAL_HOURS += TOTAL_MINS/60))
 TOTAL_MINS=$((TOTAL_MINS % 60))
