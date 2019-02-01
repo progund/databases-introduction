@@ -1,7 +1,4 @@
-
-TimeEdit,Chalmers
-"Verksamheter och information, TIG016GU",2017-11-03 - 2018-01-14,
-Startdatum,Starttid,Slutdatum,Sluttid,Kurs,Omgång,Typ,Lokal,Personal,Klass,Egen text,Undergrupp,Kurs 
+Startdatum,Starttid,Slutdatum,Sluttid,Kurs,Omgång,Undervisningstyp,Lokal,Lärare,Klass,Egen text,Undergrupp,Kurs 
 2017-11-03,10:00,2017-11-03,12:00,TIG016GU,,Förel,Torg Grön,Urban Nulden,N1SYS-1-GU,,,Verksamheter och information
 2017-11-06,10:00,2017-11-06,12:00,TIG016GU,,Förel,Torg Grön,Urban Nulden,N1SYS-1-GU,,,Verksamheter och information
 2017-11-08,10:00,2017-11-08,12:00,TIG016GU,,Förel,Torg Grön,Urban Nulden,N1SYS-1-GU,,,Verksamheter och information
