@@ -1,7 +1,4 @@
-
-TimeEdit,Chalmers
-"Programmeringsteknik och databaser, TIG058GU",2017-01-16 - 2017-03-26 v 3-12,
-Startdatum,Starttid,Slutdatum,Sluttid,Kurs,Omgång,Typ,Lokal,Personal,Klass,Egen text,Undergrupp,Kurs 
+Startdatum,Starttid,Slutdatum,Sluttid,Kurs,Omgång,Undervisningstyp,Lokal,Lärare,Klass,Egen text,Undergrupp,Kurs 
 2017-01-16,10:00,2017-01-16,12:00,TIG058GU,,Introd,Torg Grön,"Alan Carlson,Lennart Petersson",N1SYS-1-GU,,,Programmeringsteknik och databaser
 2017-01-17,10:00,2017-01-17,12:00,TIG058GU,,Förel,Torg Grön,"Alan Carlson,Lennart Petersson",N1SYS-1-GU,Java Repetion,,Programmeringsteknik och databaser
 2017-01-18,10:00,2017-01-18,12:00,TIG058GU,,Workshop,Torg Grön,"Alan Carlson,Lennart Petersson",N1SYS-1-GU,DB Workshop 1,,Programmeringsteknik och databaser
@@ -10,7 +7,7 @@ Startdatum,Starttid,Slutdatum,Sluttid,Kurs,Omgång,Typ,Lokal,Personal,Klass,Egen
 2017-01-24,10:00,2017-01-24,12:00,TIG058GU,,Förel,Torg Grön,"Alan Carlson,Lennart Petersson",N1SYS-1-GU,Java Repetition,,Programmeringsteknik och databaser
 2017-01-24,13:00,2017-01-24,15:00,TIG058GU,,Handl,Torg 3,,N1SYS-1-GU,,,Programmeringsteknik och databaser
 2017-01-25,10:00,2017-01-25,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB Relationsalgebra 1,,Programmeringsteknik och databaser
-2017-01-25,13:00,2017-01-25,15:00,TIG058GU,,Workshop,Torg Grön,,N1SYS-1-GU,DB Workshop 2,,Programmeringsteknik och databaser
+2017-01-25,13:00,2017-01-25,15:00,TIG058GU,,Workshop,Torg Grön,Alan Carlson,N1SYS-1-GU,DB Workshop 2,,Programmeringsteknik och databaser
 2017-01-26,10:00,2017-01-26,12:00,TIG058GU,,Förel,Torg Grön,"Alan Carlson,Lennart Petersson",N1SYS-1-GU,Java Arrayer,,Programmeringsteknik och databaser
 2017-01-26,13:00,2017-01-26,15:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
 2017-01-27,10:00,2017-01-27,12:00,TIG058GU,,Förel,Torg Grön,"Alan Carlson,Lennart Petersson",N1SYS-1-GU,Java I/O,,Programmeringsteknik och databaser
@@ -39,8 +36,8 @@ Startdatum,Starttid,Slutdatum,Sluttid,Kurs,Omgång,Typ,Lokal,Personal,Klass,Egen
 2017-02-16,10:00,2017-02-16,12:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
 2017-02-16,13:00,2017-02-16,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
 2017-02-17,10:00,2017-02-17,12:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
-2017-02-20,08:00,2017-02-20,17:00,TIG058GU,,Projarb,,,N1SYS-1-GU,Systemtest lärarens kontor,,Programmeringsteknik och databaser
-2017-02-21,08:00,2017-02-21,17:00,TIG058GU,,Projarb,,,N1SYS-1-GU,Systemtest lärarens kontor,,Programmeringsteknik och databaser
+2017-02-20,08:00,2017-02-20,17:00,TIG058GU,,Systemtest,,,N1SYS-1-GU,Systemtest lärarens kontor,,Programmeringsteknik och databaser
+2017-02-21,08:00,2017-02-21,17:00,TIG058GU,,Systemtest,,,N1SYS-1-GU,Systemtest lärarens kontor,,Programmeringsteknik och databaser
 2017-02-22,10:00,2017-02-22,12:00,TIG058GU,,Handl,Torg Grön,Alan Carlson,N1SYS-1-GU,,,Programmeringsteknik och databaser
 2017-02-23,10:00,2017-02-23,12:00,TIG058GU,,Förel,Torg Grön,Lennart Petersson,N1SYS-1-GU,Java Swing 1,,Programmeringsteknik och databaser
 2017-02-23,13:00,2017-02-23,15:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
