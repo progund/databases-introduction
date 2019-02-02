@@ -1,0 +1,20 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE color(color_id integer primary key, color text unique not null);
+INSERT INTO "color" VALUES(1,'Red');
+INSERT INTO "color" VALUES(2,'Blue');
+INSERT INTO "color" VALUES(3,'White');
+INSERT INTO "color" VALUES(4,'Green');
+INSERT INTO "color" VALUES(5,'Silver');
+INSERT INTO "color" VALUES(6,'Gold');
+INSERT INTO "color" VALUES(7,'Pink');
+INSERT INTO "color" VALUES(8,'Grey');
+INSERT INTO "color" VALUES(9,'Black');
+INSERT INTO "color" VALUES(10,'Orange');
+INSERT INTO "color" VALUES(11,'Purple');
+CREATE TABLE car(id integer primary key, license text unique not null, color_id
+integer);
+INSERT INTO "car" VALUES(1,'AAA 001',1);
+INSERT INTO "car" VALUES(2,'AAA 002',2);
+INSERT INTO "car" VALUES(3,'AAA 003',3);
+COMMIT;

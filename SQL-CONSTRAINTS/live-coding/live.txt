@@ -1,0 +1,70 @@
+0. Preparations
+* Create persons.db from persons.sql
+* .headers on
+* SELECT * FROM persons;
+
+1. What could possibly go wrong?
+* Insert:
+INSERT INTO persons VALUES('Doe', 'Jane', '11/09/14', 'Female');
+
+* What types of sex do we have now?
+* Who is oldest/youngest?
+* List all 'Woman'
+** Using OR ??
+
+2. Analysing this mess
+* Get statistics (count(*) from each type of sex
+
+3. Check-constraint - using IN() as an enum
+CREATE TABLE persons2(last_name TEXT, first_name TEXT, born TEXT,
+ sex TEXT CHECK( sex IN ('Woman','Man')));
+
+* Try to insert
+INSERT INTO persons2 VALUES('Joplin', 'Janis', '1943-01-19', 'Female');
+* Constraint violation.
+* Named constraint:
+CREATE TABLE persons2(last_name TEXT,
+                      first_name TEXT,
+                      born TEXT,
+                      sex TEXT,
+                      CONSTRAINT valid_sex CHECK(sex IN ('Woman','Man')) );
+* Insert invalid - check error message:
+INSERT INTO persons2 VALUES('Joplin', 'Janis', '1943-01-19', 'Female');
+Error: CHECK constraint failed: valid_sex
+
+3. Check-constraints for dates
+* Drop table persons2
+* Create table with two constraints:
+CREATE TABLE persons2(
+ last_name TEXT,
+ first_name TEXT,
+ born TEXT,
+ sex TEXT,
+ CONSTRAINT valid_sex CHECK(sex IN ('Woman','Man')),
+ CONSTRAINT valid_date CHECK(born IS datetime(Born)) );
+
+* Try to insert invalid birth date:
+INSERT INTO persons2 VALUES('Joplin', 'Janis', '01/19/43', 'Woman');
+Error: CHECK constraint failed: valid_date
+
+* Explain the check:
+sqlite> SELECT datetime('2016-02-15') is datetime('2016-02-15');
+1
+sqlite> SELECT datetime('apa') is datetime('2016-02-15');
+0
+
+4. Constraint - foreign keys - references
+* Create cars.db from cars_no_fk_constraints.sql
+* Ask what's wrong!
+* Insert a car with color_id 666
+* Ask again what's wrong!
+
+* Solution:
+* Create table with foreign key constraints from cars_fk_constraints.sql
+
+* Insert invalid car (after setting pragma):
+sqlite> PRAGMA foreign_keys=ON;
+sqlite> INSERT INTO car(license, color_id) VALUES('AAA 000', 666);
+Error: FOREIGN KEY constraint failed
+
+
