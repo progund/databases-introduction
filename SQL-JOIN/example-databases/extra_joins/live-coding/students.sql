@@ -1,0 +1,15 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE students(student_id integer primary key, name text, id_number text);
+INSERT INTO "students" VALUES(1,'Donald','200101-1111');
+INSERT INTO "students" VALUES(2,'Goofy','200202-1112');
+INSERT INTO "students" VALUES(3,'Scrooge','200303-1113');
+INSERT INTO "students" VALUES(4,'Minnie','200404-1121');
+INSERT INTO "students" VALUES(5,'Mickey','200505-1114');
+INSERT INTO "students" VALUES(6,'Pluto','200606-1115');
+INSERT INTO "students" VALUES(7,'Chip','200707-1116');
+INSERT INTO "students" VALUES(8,'Dale','200808-1117');
+INSERT INTO "students" VALUES(9,'Hewey','200909-1118');
+INSERT INTO "students" VALUES(10,'Dewey','201010-1119');
+INSERT INTO "students" VALUES(11,'Louie','201111-1130');
+COMMIT;

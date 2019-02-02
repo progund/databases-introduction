@@ -1,0 +1,70 @@
+0. Preparations
+* Create database from cars_colors.sql
+* .headers on
+* .nullvalue NULL
+* .schema
+* SELECT * FROM car;
+* SELECT * FROM color;
+
+1. Select license, color from car and color.
+
+Suggestion?
+
+We have to join the tables on color_id
+
+* car natural join color - works
+* car join color on car.color_id = color.color_id - works
+* car join color using (color_id) - works
+
+2. What colors doesn't any car have?
+* What does the question mean?
+** What colors have an id that no car has as color_id
+* Suggestions?
+
+* Why were only "car-colors" listed in example 1?
+** Inner joins skip non-matched rows
+* What about OUTER JOIN? SQLite supports LEFT OUTER JOIN
+** LEFT OUTER JOIN keeps all rows of the left table:
+** SELECT license, color FROM color LEFT OUTER JOIN car USING(color_id);
+* So, what's the license value in rows with non-car-colors?
+** NULL
+* So, what if we filter using WHERE license IS NULL?
+** SELECT color FROM color LEFT OUTER JOIN car USING(color_id) WHERE license IS NULL;
+
+Lessons learned:
+* INNER JOIN skips rows where the join-column is null (no match)
+* LEFT OUTER JOIN keeps all rows from the left table (color in our case)
+* NULL-check is done using "IS NULL"
+
+3. SELF-JOINs
+Prepare:
+Create database from students.sql
+.headers on
+.schema
+SELECT name FROM students;
+
+4. What names have a unique initial letter?
+* SELECT SUBSTR(name,1,1), name, student_id FROM students ORDER BY name;
+
+Can you see which ones have a uniq initial letter?
+* Chip, Goofy, Hewey, Louie, Pluto, Scrroge
+
+* Let's print out the names, intials and the count of initials:
+** SELECT name, SUBSTR(name, 1, 1) AS initial, COUNT(*) AS num FROM students GROUP BY initial;
+
+* GROUP BY - needed for COUNT()
+
+We can now restrict our result, using HAVING()
+* What should we give as arguments to HAVING?
+** SELECT name, SUBSTR(name, 1, 1) AS initial, COUNT(*) AS num FROM students GROUP BY initial HAVING num=1;
+
+* List only name, but What should we GROUP BY and what should we restrict to?
+** SELECT name FROM students GROUP BY SUBSTR(name, 1, 1) HAVING COUNT(SUBSTR(name, 1, 1)) = 1;
+
+* Alternative solution, using sub-select:
+SELECT name FROM (SELECT name, COUNT(SUBSTR(name, 1, 1)) AS num FROM students GROUP BY SUBSTR(name, 1, 1) HAVING num = 1);
+
+
+
+
+
