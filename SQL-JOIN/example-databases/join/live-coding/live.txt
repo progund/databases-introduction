@@ -1,0 +1,26 @@
+0. Prepare:
+Create database from exam_results_not_normalized.sql and show students.
+
+Next, create database from both students.sql and exam_results.sql
+.read students.sql
+.read exam_results.sql
+
+1. How do we list student name and exam results?
+.schema students
+.schema exam_results
+
+* What columns should we JOIN ON?
+** students.student_id and exam_results.student_id
+
+* Using cartesian product and WHERE:
+SELECT name, id_number, score FROM students, exam_results WHERE exam_results.student_id = students.student_id;
+
+* Using NATURAL JOIN:
+SELECT name, id_number, score FROM students NATURAL JOIN exam_results
+
+* Using JOIN ON
+SELECT name, id_number, score FROM students JOIN exam_results ON students.student_id = exam_results.student_id;
+
+* Using JOIN USING():
+SELECT name, id_number, score FROM students JOIN exam_results USING(student_id);
+

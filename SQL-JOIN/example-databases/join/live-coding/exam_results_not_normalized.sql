@@ -1,0 +1,15 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "exam_results_not_normalized"(student_name text, score integer);
+INSERT INTO "exam_results_not_normalized" VALUES('Donald',25);
+INSERT INTO "exam_results_not_normalized" VALUES('Goofy',30);
+INSERT INTO "exam_results_not_normalized" VALUES('Scrooge',40);
+INSERT INTO "exam_results_not_normalized" VALUES('Minnie',50);
+INSERT INTO "exam_results_not_normalized" VALUES('Mickey',10);
+INSERT INTO "exam_results_not_normalized" VALUES('Pluto',40);
+INSERT INTO "exam_results_not_normalized" VALUES('Chip',49);
+INSERT INTO "exam_results_not_normalized" VALUES('Dale',22);
+INSERT INTO "exam_results_not_normalized" VALUES('Hewey',29);
+INSERT INTO "exam_results_not_normalized" VALUES('Dewey',47);
+INSERT INTO "exam_results_not_normalized" VALUES('Louie',30);
+COMMIT;

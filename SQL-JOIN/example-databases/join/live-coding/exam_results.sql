@@ -1,0 +1,15 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "exam_results"(student_id integer, score integer);
+INSERT INTO "exam_results" VALUES(1,25);
+INSERT INTO "exam_results" VALUES(2,30);
+INSERT INTO "exam_results" VALUES(3,40);
+INSERT INTO "exam_results" VALUES(4,50);
+INSERT INTO "exam_results" VALUES(5,10);
+INSERT INTO "exam_results" VALUES(6,45);
+INSERT INTO "exam_results" VALUES(7,49);
+INSERT INTO "exam_results" VALUES(8,22);
+INSERT INTO "exam_results" VALUES(9,29);
+INSERT INTO "exam_results" VALUES(10,47);
+INSERT INTO "exam_results" VALUES(11,30);
+COMMIT;
