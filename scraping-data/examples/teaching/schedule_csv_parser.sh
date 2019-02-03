@@ -141,7 +141,7 @@ do
     TYPE_HOURS[$k]=$((TYPE_HOURS[$k] + TYPE_MINS[$k] / 60))
     TYPE_MINS[$k]=$((TYPE_MINS[$k] % 60))
     printf "%s\n" "$k: ${TYPE_HOURS[$k]} hrs and ${TYPE_MINS[$k]} mins."
-done | sort -rnk2,5
+done | sort -t ':' -k2nr -k5nr
 
 echo
 echo "Types and distribution of teacher involvement:"
@@ -150,7 +150,7 @@ do
     TEACHER_HOURS[$k]=$((TEACHER_HOURS[$k] + TEACHER_MINS[$k] / 60))
     TEACHER_MINS[$k]=$((TEACHER_MINS[$k] % 60))
     printf "%s\n" "$k: ${TEACHER_HOURS[$k]} hrs and ${TEACHER_MINS[$k]} mins."
-done | sort -rnk2,5
+done | sort -t ':' -k2nr -k5nr
 echo
 echo "Teacher type distribution:"
 for k in "${!TEACHER_TYPE_HOURS[@]}"
@@ -158,7 +158,7 @@ do
     TEACHER_TYPE_HOURS[$k]=$((TEACHER_TYPE_HOURS[$k] + TEACHER_TYPE_MINS[$k] / 60))
     TEACHER_TYPE_MINS[$k]=$((TEACHER_TYPE_MINS[$k] % 60))
     printf "%s\n" "$k: ${TEACHER_TYPE_HOURS[$k]} hrs and ${TEACHER_TYPE_MINS[$k]} mins."
-done | sort -rnk2,5
+done | sort -t ':' -k2nr -k5nr
 
 echo -e "\nEnd of report."
 echo "=========================="
