@@ -15,6 +15,8 @@ TYPE_COL=-1
 TOTAL_HOURS=0
 TOTAL_MINS=0
 
+COURSE=""
+YEAR=""
 declare -A TYPE_HOURS
 declare -A TYPE_MINS
 declare -A TEACHER_HOURS
@@ -53,6 +55,12 @@ do
     IFS='|'
     read teacher < <(echo "$line" | csvtool -t ',' -u '|' col ${TEACHER_COL} -|sed -e 's/^$/N\/A/')
     read type < <(echo "$line" | csvtool -t ',' -u '|' col ${TYPE_COL} -|sed -e 's/^$/N\/A/g')
+    read COURSE < <(echo "$line" | csvtool -t ',' -u '|' col ${COURSE_COL} -|sed -e 's/^$/N\/A/g')
+    if [[ -z "$YEAR" ]]
+    then
+        read start_date < <(echo "$line" | csvtool -t ',' -u '|' col ${START_DATE_COL} -|sed -e 's/^$/N\/A/g')
+        YEAR=$(echo $start_date|cut -d '-' -f1)
+    fi
     IFS=$OLD_IFS
     start_hour="${start:0:2}"
     if [[ "${start_hour:0:1}" -eq 0 ]]
@@ -120,9 +128,14 @@ do
     ((TOTAL_HOURS += duration_hours))
     ((TOTAL_MINS += duration_mins))    
 done < <(cat "$CSV"|csvtool drop 1 -)
+
+## Calculate the sum of hours and mins
 ((TOTAL_HOURS += TOTAL_MINS/60))
 TOTAL_MINS=$((TOTAL_MINS % 60))
 ((TOTAL_HOURS_LECTURE += TOTAL_MINS_LECTURE/60))
+
+echo "Teaching statistics for $COURSE $YEAR:"
+
 for k in "${!TYPE_HOURS[@]}"
 do
     TYPE_HOURS[$k]=$((TYPE_HOURS[$k] + TYPE_MINS[$k] / 60))
