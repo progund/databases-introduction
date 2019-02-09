@@ -24,7 +24,7 @@ which units &> /dev/null && echo "Course age since 'valid from date': $(units $(
 echo "Lärandemål"
 cat "$CODE.txt" |
     grep .|
-    grep -A 19 'Kunskap och' |
+    grep -A 20 'Kunskap och' |
     egrep -A3 'Kunskap och|Färdigheter|Värderingsför|•' |
     egrep -v '^Innehåll|Kursen|^[0-9]|^Se '
 
