@@ -14,7 +14,13 @@ YEAR=$(fmt -200 "$CODE.txt" |
               egrep '[0-9]{4}-[0-9]{2}-[0-9]{2}' |
               sed -e 's/[.,]//g' |
               head -1)
-which units &> /dev/null && echo "Age: $(units $(date +%s)sec-$(date -d "$YEAR" +%s)sec 'yr;mo;d')"
+YEAR_OF_LAST_REV=$(fmt -200 "$CODE.txt" |
+              tr ' ' '\n' |
+              egrep '[0-9]{4}-[0-9]{2}-[0-9]{2}' |
+              sed -e 's/[.,]//g' |
+              tail -1)
+which units &> /dev/null && echo "Course age: $(units $(date +%s)sec-$(date -d "$YEAR" +%s)sec 'yr;mo;d')"
+which units &> /dev/null && echo "Course age since 'valid from date': $(units $(date +%s)sec-$(date -d "$YEAR_OF_LAST_REV" +%s)sec 'yr;mo;d')"
 echo "Lärandemål"
 cat "$CODE.txt" |
     grep .|
