@@ -36,6 +36,10 @@ Lessons learned:
 * LEFT OUTER JOIN keeps all rows from the left table (color in our case)
 * NULL-check is done using "IS NULL"
 
+Bonus:
+SELECT IFNULL(license, 'No car in color '||color),color FROM color LEFT OUTER JOIN car ON color.color_id = car.color_id WHERE license IS NULL;
+
+(A bit beside the point, but shows IFNULL)
 3. SELF-JOINs
 Prepare:
 Create database from students.sql
@@ -63,8 +67,4 @@ We can now restrict our result, using HAVING()
 
 * Alternative solution, using sub-select:
 SELECT name FROM (SELECT name, COUNT(SUBSTR(name, 1, 1)) AS num FROM students GROUP BY SUBSTR(name, 1, 1) HAVING num = 1);
-
-
-
-
 
