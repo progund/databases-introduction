@@ -1,0 +1,109 @@
+sqlite> create table test(license text not null unique, constraint valid_license check(GLOB('[A-Z][A-Z][A-Z] [0-9][0-9][0-9]', license)));
+
+sqlite> insert into test values('AAA 111');
+sqlite> insert into test values('aaa 111');
+Error: CHECK constraint failed: valid_license
+
+sqlite> insert into test values('');
+Error: CHECK constraint failed: valid_license
+
+sqlite> insert into test values('AAA 111');
+Error: UNIQUE constraint failed: test.license
+
+
+sqlite> SELECT GLOB('[A-Z]_', 'aa');
+0
+sqlite> SELECT GLOB('[A-Z]_', 'Aa');
+0
+sqlite> SELECT GLOB('[A-Z]_', 'A_');
+1
+sqlite> SELECT GLOB('[A-Z]?', 'A_');
+1
+sqlite> SELECT GLOB('[A-Z]?', 'Aa');
+1
+sqlite> SELECT GLOB('[A-Z]?', 'A');
+0
+sqlite> SELECT GLOB('[A-Z]?', 'A2');
+1
+sqlite> SELECT GLOB('[A-Z]', 'A');
+1
+sqlite> SELECT GLOB('[A-Z]', 'B');
+1
+
+
+sqlite> .read persons.sql
+sqlite> .schema
+CREATE TABLE persons (last_name TEXT, first_name TEXT, born TEXT, sex TEXT);
+
+sqlite> SELECT * FROM persons;
+Nilsson|Tommy|1960-03-11|Man
+Norum|John|1964-02-23|Man
+Jett|Joan|1958-09-22|Woman
+Wilson|Ann|1950-06-19|Woman
+
+sqlite> INSERT INTO persons VALUES('Doe', 'Jane', '11/09/14', 'Female');
+
+sqlite> SELECT * FROM persons;
+Nilsson|Tommy|1960-03-11|Man
+Norum|John|1964-02-23|Man
+Jett|Joan|1958-09-22|Woman
+Wilson|Ann|1950-06-19|Woman
+Doe|Jane|11/09/14|Female
+
+sqlite> SELECT * FROM persons where sex = 'Female';
+Doe|Jane|11/09/14|Female
+sqlite> SELECT * FROM persons where sex = 'Woman';
+Jett|Joan|1958-09-22|Woman
+Wilson|Ann|1950-06-19|Woman
+
+sqlite> SELECT * FROM persons;
+Nilsson|Tommy|1960-03-11|Man
+Norum|John|1964-02-23|Man
+Jett|Joan|1958-09-22|Woman
+Wilson|Ann|1950-06-19|Woman
+Doe|Jane|11/09/14|Female
+
+sqlite> SELECT ('Female' IN ('Man', 'Woman'));
+0
+sqlite> SELECT ('Woman' IN ('Man', 'Woman'));
+1
+
+sqlite> CREATE TABLE persons2 (last_name TEXT, first_name TEXT, born TEXT, sex TEXT CHECK(sex IN ('Man', 'Woman')));
+sqlite> .schema
+CREATE TABLE persons2 (last_name TEXT, first_name TEXT, born TEXT, sex TEXT CHECK(sex IN ('Man', 'Woman')));
+
+sqlite> INSERT INTO persons2 VALUES('Doe', 'Jane', '11/09/14', 'Female');
+Error: CHECK constraint failed: persons2
+
+sqlite> drop table persons2;
+
+sqlite> CREATE TABLE persons2 (last_name TEXT, first_name TEXT, born TEXT, sex TEXT, CONSTRAINT valid_sex_value CHECK(sex IN ('Man', 'Woman')));
+sqlite> .schema
+CREATE TABLE persons2 (last_name TEXT, first_name TEXT, born TEXT, sex TEXT, CONSTRAINT valid_sex_value CHECK(sex IN ('Man', 'Woman')));
+sqlite> INSERT INTO persons2 VALUES('Doe', 'Jane', '11/09/14', 'Female');
+Error: CHECK constraint failed: valid_sex_value
+
+sqlite> drop table persons2;
+sqlite> CREATE TABLE persons2 (last_name TEXT, first_name TEXT, born TEXT, sex TEXT, CONSTRAINT valid_sex_value CHECK(sex IN ('Man', 'Woman')));
+sqlite> .schema
+CREATE TABLE persons2 (last_name TEXT, first_name TEXT, born TEXT, sex TEXT, CONSTRAINT valid_sex_value CHECK(sex IN ('Man', 'Woman')));
+
+sqlite> INSERT INTO persons2 VALUES('Doe', 'Jane', '11/09/14', 'Female');
+Error: CHECK constraint failed: valid_sex_value
+
+sqlite> drop table persons2;
+sqlite> CREATE TABLE persons2 (last_name TEXT, first_name TEXT, born DATETIME, sex TEXT, CONSTRAINT valid_sex_value CHECK(sex IN ('Man', 'Woman')), CONSTRAINT valid_birth_date CHECK(born IS datetime(born)));
+
+sqlite> SELECT datetime ('2019-01-01');
+2019-01-01 00:00:00
+sqlite> SELECT datetime ('2019asdfasdf');
+
+sqlite> .nullvalue NULL
+sqlite> SELECT datetime ('2019asdfasdf');
+NULL
+
+sqlite> SELECT datetime ('11/09/14');
+NULL
+
+sqlite> INSERT INTO persons2 VALUES('Doeasdf', 'Janeasdf', '11/09/14', 'Woman');
+Error: CHECK constraint failed: valid_birth_date

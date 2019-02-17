@@ -67,4 +67,18 @@ sqlite> PRAGMA foreign_keys=ON;
 sqlite> INSERT INTO car(license, color_id) VALUES('AAA 000', 666);
 Error: FOREIGN KEY constraint failed
 
+4. GLOB
+Let's create a constraint for valid license numbers:
+
+Let's investigate GLOB
+
+sqlite> SELECT GLOB('[A-Z]', 'A');
+1
+sqlite> SELECT GLOB('[A-Z]', 'B');
+1
+
+
+CREATE TABLE test(license TEXT NOT NULL UNIQUE, CONSTRAINT valid_license CHECK(GLOB('[A-Z][A-Z][A-Z] [0-9][0-9][0-9]', license)));
+
+https://www.sqlite.org/lang_corefunc.html
 
