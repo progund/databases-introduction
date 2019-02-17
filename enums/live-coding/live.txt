@@ -1,0 +1,36 @@
+Problem:
+We want to allow only a certain set of values for a column.
+
+An enumeration is a datatype with a set of named (legal) values.
+
+A common example is the suits of a deck of cards; Club, Diamond, Heart, Spade.
+
+For such a short list of enumerated values, we could use the IN operator:
+
+CREATE TABLE card (suite TEXT, rank INTEGER, CONSTRAINT valid_suite CHECK(suite IN ('Club', 'Diamond', 'Heart', 'Spade')));
+
+But for a longer set of values, and where values might vary over time (new legal values might be allowed in the future), we need another mechanism than the scheck constraint using IN.
+
+Example:
+We want to use colors by name but only allow a set of colors. We create a color table with the following schema:
+CREATE TABLE color(color TEXT NOT NULL PRIMARY KEY);
+
+Now, we can insert the valid colors into the color table:
+INSERT INTO color VALUES('Black');
+INSERT INTO color VALUES('White');
+INSERT INTO color VALUES('Red');
+INSERT INTO color VALUES('Green');
+INSERT INTO color VALUES('Blue');
+
+We can now use the color table as a kind of enum if we use a foreign key constraint.
+
+CREATE TABLE car(license TEXT NOT NULL PRIMARY KEY, color TEXT NOT NULL, make TEXT, FOREIGN KEY(color) REFERENCES color(color));
+
+We have to remember to turn foreign key checks on:
+
+PRAGMA FOREIGN_KEYS=1;
+
+Unfortunately, we don't get a detailed error message when there's a violation:
+sqlite> INSERT INTO car VALUES('ABC 133', 'Brown', 'Mazda');
+Error: FOREIGN KEY constraint failed
+
