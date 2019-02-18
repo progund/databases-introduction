@@ -2,7 +2,7 @@
 
 Q="$1"
 CS_URL="https://csjobb.idg.se/s%C3%B6kjobb/?Keywords="
-for url in $(GET "${CS_URL}${Q}" | grep jobb-info)
+for url in $(GET "${CS_URL}${Q}" | grep jobb-info | sort | uniq)
 do
     echo "https://csjobb.idg.se${url}"
     GET "http://csjobb.idg.se${url}" |
@@ -12,7 +12,7 @@ do
 done
 
 echo "Summary:"
-for url in $(GET "${CS_URL}${Q}" | grep jobb-info)
+for url in $(GET "${CS_URL}${Q}" | grep jobb-info | sort | uniq)
 do
     echo "https://csjobb.idg.se${url}"
 done
@@ -20,7 +20,7 @@ done
 echo "You searched for $Q"
 echo "These phrases matched:"
 
-for url in $(GET "${CS_URL}${Q}" | grep jobb-info)
+for url in $(GET "${CS_URL}${Q}" | grep jobb-info | sort | uniq)
 do
     GET "http://csjobb.idg.se${url}" |
         w3m -T text/html -dump |
