@@ -1,0 +1,39 @@
+Här är track-tabellen uppdelad i tre tabeller:
+
+sqlite> .schema
+CREATE TABLE artist(artist_name TEXT, artist_id INTEGER PRIMARY KEY);
+CREATE TABLE genre(genre_name TEXT, genre_id INTEGER PRIMARY KEY);
+CREATE TABLE track(title TEXT, artist_id INTEGER, genre_id INTEGER, album_id INTEGER);
+
+Så här skapades de:
+
+sqlite> drop table track;
+sqlite> CREATE TABLE track(title TEXT, artist_id INTEGER, genre_id INTEGER, album_id INTEGER);
+CREATE TABLE genre(genre_name TEXT, genre_id INTEGER PRIMARY KEY);
+CREATE TABLE track(title TEXT, artist_id INTEGER, genre_id INTEGER, album_id INTEGER);
+
+Data i tabellerna:
+
+INSERT INTO track VALUES('The Look', 1, 1, 3), ('Sleeping in my car', 1, 1, 4), ('Crawfish', 2, 2, 1), ('Mystery train', 2, 3, 3);
+INSERT INTO "genre" VALUES('Pop',1);
+INSERT INTO "genre" VALUES('Exotica',2);
+INSERT INTO "genre" VALUES('Rock',3);
+
+INSERT INTO "artist" VALUES('Roxette',1);
+INSERT INTO "artist" VALUES('Elvis',2);
+
+INSERT INTO "track" VALUES('The Look',1,1,3);
+INSERT INTO "track" VALUES('Sleeping in my car',1,1,4);
+INSERT INTO "track" VALUES('Crawfish',2,2,1);
+INSERT INTO "track" VALUES('Mystery train',2,3,3);
+
+SELECT med samma innehåll som när det var en stor tabell:
+
+sqlite> .headers on
+sqlite> SELECT title, artist_name, genre_name, album_id FROM track NATURAL JOIN artist NATURAL JOIN genre;
+title|artist_name|genre_name|album_id
+The Look|Roxette|Pop|3
+Sleeping in my car|Roxette|Pop|4
+Crawfish|Elvis|Exotica|1
+Mystery train|Elvis|Rock|3
+

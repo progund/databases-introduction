@@ -1,0 +1,20 @@
+Den stora track-listan, allt i en stor tabell:
+
+sqlite> .headers on
+sqlite> SELECT * FROM track;
+title|artist|genre|album_id
+The Look|Roxette|Pop|3
+Sleeping in my car|Roxette|Pop|4
+Crawfish|Elvis|Exotica|1
+Mystery train|Elvis|Rock|3
+sqlite> .schema
+CREATE TABLE track(title TEXT, artist TEXT, genre TEXT, album_id INTEGER);
+sqlite> .dump
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE track(title TEXT, artist TEXT, genre TEXT, album_id INTEGER);
+INSERT INTO "track" VALUES('The Look','Roxette','Pop',3);
+INSERT INTO "track" VALUES('Sleeping in my car','Roxette','Pop',4);
+INSERT INTO "track" VALUES('Crawfish','Elvis','Exotica',1);
+INSERT INTO "track" VALUES('Mystery train','Elvis','Rock',3);
+COMMIT;
