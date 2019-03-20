@@ -1,0 +1,119 @@
+Givet följande två tabeller:
+CREATE TABLE students(student_id INTEGER PRIMARY KEY, name TEXT,
+                      id_number TEXT);
+
+CREATE TABLE "exam_results"(student_id INTEGER, score INTEGER);
+
+Där exam_results innehåller student_id och poäng på tentan för att hålla reda på
+vilken poäng respektive student hade, så har det smugit sig in rader med
+"ogiltiga" student_id (sådana som inte finns i tabellen students).
+
+Hur får vi reda på vilka student_id i exam_results som saknar motsvarighet i
+students-tabellen? Uttryckt annorlunda, vilka student_id i tabellen
+exam_results är det ingen student som har?
+
+Med en LEFT JOIN så kopplas två tabeller ihop med hjälp av två kolumner, precis
+som en vanlig JOIN. Skillnaden är att rader från den vänstra tabellen får vara
+med även om det inte gick att hitta motsvarigheten i den högra tabellen.
+Exempel:
+
+sqlite> .nullvalue NULL
+sqlite> .headers on
+sqlite> SELECT exam_results.student_id, name, score
+          FROM exam_results LEFT JOIN students
+            ON students.student_id = exam_results.student_id;
+student_id|name|score
+1|Donald|25
+2|Goofy|30
+3|Scrooge|40
+4|Minnie|50
+5|Mickey|10
+6|Pluto|45
+7|Chip|49
+8|Dale|22
+9|Hewey|29
+10|Dewey|47
+11|Louie|30
+200|NULL|99
+
+Raden i exam_results med student_id 200 fick vara med i resultatet, trots att
+den inte gick att koppla ihop med en rad i students med samma student_id. Det
+ledde till att den sista raden har NULL som namn - det fanns ju ingen student
+och därför inget namn i students då ingen student i students hade student_id
+200.
+
+Det betyder att rader i en left_join på student_id där exam_results är den
+vänstra tabellen (och alltså ska vara kvar) kommer ha NULL som namn. Det
+betyder vidare att motsvarande student_id saknas i students_tabellen.
+
+Allt vi behöver göra då är att lägga till en WHERE-klausul med krav på att
+name ska vara NULL, för att få fram vilka student_id i exam_results som
+saknar motsvarighet i students:
+
+SELECT exam_results.student_id
+  FROM exam_results LEFT JOIN students
+    ON students.student_id = exam_results.student_id
+ WHERE name IS null;
+
+student_id
+200
+
+Lägg också märke till att NULL kontrolleras med operatorn IS och inte =
+(likamed).
+
+Varifrån kommer "name" i WHERE-klausulen, tänker ni kanske? Den enda kolumnen
+vi efterfrågar i SELECT-satsen är ju exam_results.student_id.
+
+För att förstå detta, tänk efter på vad en JOIN är. En JOIN (t ex en LEFT JOIN)
+är en sammanslagning av kolumner från två tabeller enligt något villkor.
+Resultatet är en ny (tillfällig) tabell med alla kolumner från bägge tabellerna.
+Därför kan vi göra såhär:
+sqlite> SELECT name FROM exam_results
+               LEFT JOIN students
+                      ON students.student_id = exam_results.student_id;
+name
+Donald
+Goofy
+Scrooge
+Minnie
+Mickey
+Pluto
+Chip
+Dale
+Hewey
+Dewey
+Louie
+NULL
+
+Ovan begär vi just kolumnen "name" från sammanslagningen av tabellerna.
+
+Eftersom name är med i den stora tabellen som är resultatet av JOIN, så
+kan vi begära att endast ta med name i resultatet. Av samma skäl kan vi
+använda name som en del av WHERE.
+
+Skulle vi välja ut alla kolumner från sammanslagningen (JOIN) med *-operatorn,
+så skulle vi se vilka alla dessa kolumner är:
+
+sqlite> SELECT * FROM exam_results
+            LEFT JOIN students
+                   ON students.student_id = exam_results.student_id;
+student_id|score|student_id|name|id_number
+1|25|1|Donald|200101-1111
+2|30|2|Goofy|200202-1112
+3|40|3|Scrooge|200303-1113
+4|50|4|Minnie|200404-1121
+5|10|5|Mickey|200505-1114
+6|45|6|Pluto|200606-1115
+7|49|7|Chip|200707-1116
+8|22|8|Dale|200808-1117
+9|29|9|Hewey|200909-1118
+10|47|10|Dewey|201010-1119
+11|30|11|Louie|201111-1130
+200|99|NULL|NULL|NULL
+
+Som ni ser är alla kolumner från bägge tabeller med i det resultset vi
+får om vi använder * från en JOIN.
+
+Därför kan vi välja att ta med endast name från det resultset vi får
+från JOIN-satsen ovan. Och därför kan vi även använda name i en WHERE-klausul.
+

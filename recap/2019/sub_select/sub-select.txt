@@ -1,0 +1,49 @@
+En SELECT resulterar i ett "resultset", vilket är som en tillfällig tabell
+med ett visst antal kolumner och rader.
+
+Till exempel kan vi skapa ett resultset med hjälp av en SELECT och en WHERE-
+klausul för att ta med studenter med ett ID-nummer under ett visst värde:
+
+sqlite> SELECT *
+          FROM students
+         WHERE id_number < '200701-0000'
+      ORDER BY id_number;
+student_id|name|id_number
+1|Donald|200101-1111
+2|Goofy|200202-1112
+3|Scrooge|200303-1113
+4|Minnie|200404-1121
+5|Mickey|200505-1114
+6|Pluto|200606-1115
+
+Eftersom det resultset vi får ovan är som en tillfällig tabell, så varför
+skulle vi inte kunna göra en SELECT mot den (tillfälliga) tabellen?
+
+Faktum är att vi kan det och det är det som är en "nästlad" SELECT vilket
+också kallas "subselect" (eller "sub select" eller "sub-select").
+
+Om vi först vill välja ut studenter med ett id_nummer under '200701-0000'
+och ur detta resultset vill välja ut studenten med störst student_id
+(av oklar anledning, men vi leker att det är en intressant fråga) kan vi
+således göra en SELECT från vår tidigare SELECT:
+
+sqlite> SELECT max(student_id) FROM
+         (
+           SELECT * FROM students
+                   WHERE id_number < '200701-0000'
+                ORDER BY id_number
+         );
+6
+
+Med en nivå på varsin rad blir det kanske tydligare för vissa:
+SELECT max(student_id) FROM
+ (SELECT * FROM students WHERE id_number < '200701-0000' ORDER BY id_number);
+
+Det som är viktigt att förstå här är att ett resultset från en SELECT är precis
+som en tillfällig tabell. Därför kan vi även göra en SELECT från en SELECT.
+
+Det som är viktigt att komma ihåg är parentesen kring det inre
+SELECT-uttrycket. Precis som vid matematiska uttryck, evalueras parenteser
+före allt annat. I vårt fall så är parentesen runt en SELECT som måste
+köras först, så att vi kan köra den yttre SELECT-satsen mot resultatet.
+
