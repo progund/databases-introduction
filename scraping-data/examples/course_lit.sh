@@ -47,6 +47,15 @@ check_required()
     fi
 }
 
+cleanup()
+{
+    echo "Cleaning up"
+    # Don't use variables with rm without extra precaution
+    rm -rf literature_lists &> /dev/null
+}
+
+trap cleanup EXIT
+
 course_codes()
 {
     GET "$SYS_VP_URL" |
@@ -68,9 +77,8 @@ lit_list()
 }
 
 check_required
+cleanup
 mkdir -p "$FILE_DIR"
-# don't use variables with rm and * - what if the variable is empty?
-rm -f literature_lists/*.*
 
 rm -f $HTML_FILE # will fail on empty variable
 echo "<!DOCTYPE html>
@@ -134,6 +142,4 @@ echo "</p>
 </html>" >> "$HTML_FILE"
 google-chrome "$HTML_FILE" || die "Could not open $HTML_FILE using google-chrome"
 
-# Don't use variables with rm without extra precaution
-rm literature_lists/TIG*.{txt,pdf}
-rmdir literature_lists
+#clean_up
