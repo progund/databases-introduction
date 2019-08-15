@@ -26,11 +26,6 @@ verify(){
     return 0;
 }
 
-die() {
-    echo "$1" >&2
-    exit 1
-}
-
 check_required()
 {
     for cmd in $REQUIRED_COMMANDS
@@ -67,6 +62,11 @@ sig_cleanup()
 }
 trap cleanup EXIT
 trap sig_cleanup INT TERM
+
+die() {
+    echo "$1" >&2
+    sig_cleanup
+}
 
 course_codes()
 {
@@ -152,6 +152,6 @@ done
 echo "</p>
 </body>
 </html>" >> "$HTML_FILE"
-google-chrome "$HTML_FILE" || die "Could not open $HTML_FILE using google-chrome"
+google-chrome2 "$HTML_FILE" || die "Could not open $HTML_FILE using google-chrome"
 
 #clean_up
