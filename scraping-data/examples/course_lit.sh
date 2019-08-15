@@ -49,12 +49,24 @@ check_required()
 
 cleanup()
 {
+    EXIT=$?
     echo "Cleaning up"
     # Don't use variables with rm without extra precaution
     rm -rf literature_lists &> /dev/null
+    if (( $EXIT != 0 ))
+    then
+        exit $EXIT
+    fi
 }
-
+sig_cleanup()
+{
+    trap '' EXIT
+    rm $HTML_FILE &> /dev/null
+    false
+    cleanup
+}
 trap cleanup EXIT
+trap sig_cleanup INT TERM
 
 course_codes()
 {
