@@ -1,5 +1,39 @@
 #!/bin/bash
 
+missing=""
+
+verify(){
+    which "$1" &> /dev/null || { missing="$missing $1"; return 1; }
+    return 0;
+}
+
+die() {
+    echo "$1" >&2
+    exit 1
+}
+REQUIRED_COMMANDS="
+curl
+jq
+lwp-request
+pdftotext
+wget
+"
+check_required()
+{
+    for cmd in $REQUIRED_COMMANDS
+    do
+        verify "$cmd"
+    done
+
+    if [[ ! -z "$missing" ]]
+    then
+        echo "$0 depends on the following programs:"
+        echo "$missing"
+        echo "Please install and run the script again."
+        exit 1
+    fi
+}
+
 course_codes()
 {
     GET 'https://ait.gu.se/utbildning/program/systemvetenskap/om-programmet' |
@@ -15,6 +49,7 @@ lit_list()
     curl -s -A 'Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -i -d "courseQuery=${CODE}&syllabiQuery=$CODE" https://utbildning.gu.se/kurser/hitta-kursplan/syllabisearchresultview/ | tr '=' '\n' | grep '>Litteratur' | cut -d '"' -f2
 }
 
+check_required
 PROGRAM="Information Systems: IT, Users and Organizations"
 HTML_FILE="lit_list.html"
 FILE_DIR="literature_lists"
