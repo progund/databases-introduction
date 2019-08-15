@@ -1,0 +1,56 @@
+
+TimeEdit,Chalmers
+"Programmeringsteknik och databaser, TIG058GU",2015-01-19 - 2015-06-07 v 4-23,
+Startdatum,Starttid,Slutdatum,Sluttid,Kurs,Omgång,Typ,Lokal,Personal,Klass,Egen text,Undergrupp,Kurs 
+2015-01-19,10:00,2015-01-19,12:00,TIG058GU,,Introd,Torg Grön,Lennart Petersson,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-01-20,10:00,2015-01-20,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,Java,,Programmeringsteknik och databaser
+2015-01-21,10:00,2015-01-21,12:00,TIG058GU,,Förel,Torg Grön,Anna-Lena Fredriksson,N1SYS-1-GU,Teknisk Dokumentation,,Programmeringsteknik och databaser
+2015-01-21,13:00,2015-01-21,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-01-22,10:00,2015-01-22,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,F Java,,Programmeringsteknik och databaser
+2015-01-23,13:00,2015-01-23,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-01-26,10:00,2015-01-26,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-01-28,10:00,2015-01-28,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,DB Intro.,,Programmeringsteknik och databaser
+2015-01-28,13:00,2015-01-28,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-01-30,10:00,2015-01-30,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,Java Kommentarer,,Programmeringsteknik och databaser
+2015-01-30,13:00,2015-01-30,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-02,10:00,2015-02-02,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,"DB Logik, mängdlära",,Programmeringsteknik och databaser
+2015-02-03,09:00,2015-02-03,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,Java Sortering,,Programmeringsteknik och databaser
+2015-02-04,10:00,2015-02-04,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB Relationsmodellen,,Programmeringsteknik och databaser
+2015-02-04,13:00,2015-02-04,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-06,09:00,2015-02-06,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,Binärsökning...,,Programmeringsteknik och databaser
+2015-02-06,13:00,2015-02-06,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-09,10:00,2015-02-09,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB Relationsalgebra 1,,Programmeringsteknik och databaser
+2015-02-10,09:00,2015-02-10,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,Java Arv 1,,Programmeringsteknik och databaser
+2015-02-11,10:00,2015-02-11,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB Relationsalgebra 2,,Programmeringsteknik och databaser
+2015-02-11,13:00,2015-02-11,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-12,13:00,2015-02-12,15:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 2,,Programmeringsteknik och databaser
+2015-02-13,09:00,2015-02-13,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,Java Arv 2,,Programmeringsteknik och databaser
+2015-02-13,13:00,2015-02-13,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-16,10:00,2015-02-16,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB SQL 1,,Programmeringsteknik och databaser
+2015-02-17,09:00,2015-02-17,12:00,TIG058GU,,Förel,Torg Grön,Henrik Sandklef,N1SYS-1-GU,Java Arv 3,,Programmeringsteknik och databaser
+2015-02-18,10:00,2015-02-18,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB SQL 2,,Programmeringsteknik och databaser
+2015-02-18,13:00,2015-02-18,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-19,10:00,2015-02-19,12:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-20,09:00,2015-02-20,17:00,TIG058GU,,Workshop,Torg Grön,,N1SYS-1-GU,Systemtest 1,,Programmeringsteknik och databaser
+2015-02-23,09:00,2015-02-23,12:00,TIG058GU,,Workshop,Torg Grön,,N1SYS-1-GU,,,Programmeringsteknik och databaser
+2015-02-23,13:00,2015-02-23,15:00,TIG058GU,,Workshop,Torg Grön,Anna-Lena Fredriksson,N1SYS-1-GU,Dokumentation,,Programmeringsteknik och databaser
+2015-02-24,10:00,2015-02-24,12:00,TIG058GU,,Förel,Torg Grön,Lennart Petersson,N1SYS-1-GU,Java JDBC 1,,Programmeringsteknik och databaser
+2015-02-25,10:00,2015-02-25,12:00,TIG058GU,,Förel,Torg Grön,Lennart Petersson,N1SYS-1-GU,Java JDBC 2,,Programmeringsteknik och databaser
+2015-02-27,10:00,2015-02-27,12:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 2,,Programmeringsteknik och databaser
+2015-03-02,10:00,2015-03-02,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB E/R modellering,,Programmeringsteknik och databaser
+2015-03-03,10:00,2015-03-03,12:00,TIG058GU,,Förel,Torg Grön,Lennart Petersson,N1SYS-1-GU,Java GUI 1,,Programmeringsteknik och databaser
+2015-03-04,10:00,2015-03-04,12:00,TIG058GU,,Förel,Torg Grön,Lennart Petersson,N1SYS-1-GU,Java GUI 2,,Programmeringsteknik och databaser
+2015-03-06,10:00,2015-03-06,12:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Labb 3,,Programmeringsteknik och databaser
+2015-03-09,10:00,2015-03-09,12:00,TIG058GU,,Förel,Torg Grön,Alan Carlson,N1SYS-1-GU,DB E/R modellering,,Programmeringsteknik och databaser
+2015-03-09,13:00,2015-03-09,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 3,,Programmeringsteknik och databaser
+2015-03-10,10:00,2015-03-10,12:00,TIG058GU,,Förel,Torg Grön,Lennart Petersson,N1SYS-1-GU,DB Interna nivån 1,,Programmeringsteknik och databaser
+2015-03-11,10:00,2015-03-11,12:00,TIG058GU,,Förel,Torg Grön,Lennart Petersson,N1SYS-1-GU,DB Interna nivån 2,,Programmeringsteknik och databaser
+2015-03-11,13:00,2015-03-11,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 3,,Programmeringsteknik och databaser
+2015-03-13,09:00,2015-03-13,12:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 3,,Programmeringsteknik och databaser
+2015-03-16,13:00,2015-03-16,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 3,,Programmeringsteknik och databaser
+2015-03-18,13:00,2015-03-18,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 3,,Programmeringsteknik och databaser
+2015-03-20,13:00,2015-03-20,16:00,TIG058GU,,Handl,Torg Grön,,N1SYS-1-GU,Handledning Labb 3,,Programmeringsteknik och databaser
+2015-03-23,09:00,2015-03-23,16:00,TIG058GU,,Workshop,Torg Grön,,N1SYS-1-GU,Systemtest 2,,Programmeringsteknik och databaser
+2015-03-24,09:00,2015-03-24,16:00,TIG058GU,,Workshop,Torg Grön,,N1SYS-1-GU,Systemtest 2,,Programmeringsteknik och databaser
+2015-03-25,08:30,2015-03-25,12:30,TIG058GU,,Tentamen,,,N1SYS-1-GU,Lokal anslås i hus Saga,,Programmeringsteknik och databaser
+2015-04-29,08:30,2015-04-29,12:30,TIG058GU,,Tentamen,,,N1SYS-1-GU,Lokal anslås i hus Saga,,Programmeringsteknik och databaser
