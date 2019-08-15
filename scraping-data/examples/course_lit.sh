@@ -11,6 +11,7 @@ die() {
     echo "$1" >&2
     exit 1
 }
+
 REQUIRED_COMMANDS="
 curl
 jq
@@ -129,7 +130,7 @@ done
 echo "</p>
 </body>
 </html>" >> "$HTML_FILE"
-google-chrome "$HTML_FILE" || echo "Could not open $HTML_FILE using google-chrome" >&2
+google-chrome "$HTML_FILE" || die "Could not open $HTML_FILE using google-chrome"
 
 # Don't use variables with rm without extra precaution
 rm literature_lists/TIG*.{txt,pdf}
