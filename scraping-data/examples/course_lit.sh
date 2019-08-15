@@ -152,6 +152,6 @@ done
 echo "</p>
 </body>
 </html>" >> "$HTML_FILE"
-google-chrome2 "$HTML_FILE" || die "Could not open $HTML_FILE using google-chrome"
+google-chrome "$HTML_FILE" || die "Could not open $HTML_FILE using google-chrome"
 
 #clean_up
