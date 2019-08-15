@@ -1,6 +1,25 @@
 #!/bin/bash
 
 missing=""
+REQUIRED_COMMANDS="
+curl
+jq
+lwp-request
+pdftotext
+wget
+"
+SYS_VP_URL="https://ait.gu.se/utbildning/program/systemvetenskap/om-programmet"
+USER_AGENT="Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 \
+(KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36 Accept: \
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+GU_API_URL="https://utbildning.gu.se/kurser/hitta-kursplan/\
+syllabisearchresultview/"
+PROGRAM="Information Systems: IT, Users and Organizations"
+HTML_FILE="lit_list.html"
+FILE_DIR="literature_lists"
+LIT_LIST_BASE="http://kursplaner.gu.se/svenska"
+ADLIBRIS_BASE="https://www.adlibris.com/se/sok?q="
+BOKUS_BASE="https://www.bokus.com/bok/"
 
 verify(){
     which "$1" &> /dev/null || { missing="$missing $1"; return 1; }
@@ -12,13 +31,6 @@ die() {
     exit 1
 }
 
-REQUIRED_COMMANDS="
-curl
-jq
-lwp-request
-pdftotext
-wget
-"
 check_required()
 {
     for cmd in $REQUIRED_COMMANDS
@@ -37,32 +49,25 @@ check_required()
 
 course_codes()
 {
-    GET 'https://ait.gu.se/utbildning/program/systemvetenskap/om-programmet' |
+    GET "$SYS_VP_URL" |
         grep TIG |
         tr '(' '\n' |
         tr ')' '\n' |
         grep ^TIG
 }
 
-USER_AGENT="Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 \
-(KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36 Accept: \
-text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
-GU_API_POST_PARAMS="courseQuery=${CODE}&syllabiQuery="
-GU_API_URL="https://utbildning.gu.se/kurser/hitta-kursplan/syllabisearchresultview/"
 
 lit_list()
 {
     CODE=$1
-    curl -s -A "$USER_AGENT" -i -d "$GU_API_POST_PARAMS$CODE" "$GU_API_URL" |
+    GU_API_POST_PARAMS="courseQuery=${CODE}&syllabiQuery=$CODE"
+    curl -s -A "$USER_AGENT" -i -d "$GU_API_POST_PARAMS" "$GU_API_URL" |
         tr '=' '\n' |
         grep '>Litteratur' |
         cut -d '"' -f2
 }
 
 check_required
-PROGRAM="Information Systems: IT, Users and Organizations"
-HTML_FILE="lit_list.html"
-FILE_DIR="literature_lists"
 mkdir -p "$FILE_DIR"
 # don't use variables with rm and * - what if the variable is empty?
 rm -f literature_lists/*.*
@@ -92,11 +97,6 @@ for PDF in $(find literature_lists -name '*.pdf')
 do
     pdftotext "$PDF"
 done
-
-LIT_LIST_BASE="http://kursplaner.gu.se/svenska"
-ADLIBRIS_BASE="https://www.adlibris.com/se/sok?q="
-BOKUS_BASE="https://www.bokus.com/bok/"
-
 
 for TXT in $(find "$FILE_DIR" -name '*.txt')
 do
