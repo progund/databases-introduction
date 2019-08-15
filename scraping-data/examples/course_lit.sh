@@ -44,7 +44,9 @@ course_codes()
         grep ^TIG
 }
 
-USER_AGENT="Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+USER_AGENT="Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 \
+(KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36 Accept: \
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
 GU_API_POST_PARAMS="courseQuery=${CODE}&syllabiQuery="
 GU_API_URL="https://utbildning.gu.se/kurser/hitta-kursplan/syllabisearchresultview/"
 
