@@ -139,14 +139,17 @@ do
         else
             echo "Done! $title" >&2
         fi
+        echo -n "Checking availability of $title ($isbn) on Adlibris..." >&2
         lwp-request -m GET "${ADLIBRIS_BASE}$short_isbn" |
             grep -q 'inga tr&#228;ffar' &&
             echo "&nbsp;* $title $isbn - Not found on Adlibris<br>" ||
             echo "&nbsp;* <a href=\"${ADLIBRIS_BASE}$short_isbn\">Adlibris search for ISBN $isbn $title</a><br>"
-        lwp-request -m GET "${BOKUS_BASE}$short_isbn" |
-            grep -q 'Produkten kan inte hittas' &&
+        echo -en "Done!\nChecking availability of $title ($isbn) on Bokus..." >&2
+        lwp-request -H "User-Agent: $USER_AGENT" -m GET "${BOKUS_BASE}$short_isbn" |
+            grep -q 'Produkten kan inte hittas'  &&
             echo "&nbsp;* $title $isbn - Not found on Bokus<br>" ||
             echo "&nbsp;* <a href=\"${BOKUS_BASE}$short_isbn\">Bokus search for ISBN $isbn $title</a><br>"
+        echo "Done!" >&2
     done >> "$HTML_FILE"
 done
 echo "</p>
