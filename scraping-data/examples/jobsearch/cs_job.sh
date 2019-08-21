@@ -22,6 +22,13 @@ echo "These phrases matched:"
 
 for url in $(GET "${CS_URL}${Q}" | grep jobb-info | sort | uniq)
 do
+    echo "DEBUG: $url"
+    echo "phrase search:"
+    GET "http://csjobb.idg.se${url}" |
+        w3m -T text/html -dump |
+        awk '/• Ansök/,/Dela/' |
+        egrep -v '•|^Dela$|\[\]' | grep -C2 -i "$Q"
+    echo "================"
     GET "http://csjobb.idg.se${url}" |
         w3m -T text/html -dump |
         awk '/computersweden.se/,/Dela/' |
